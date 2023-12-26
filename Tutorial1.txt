@@ -1,0 +1,217 @@
+ubuntu restricted extras --> sudo apt install ubuntu-restricted-extras
+Ubuntu Restricted Extras is a software package for the computer operating system Ubuntu that allows the user to install essential software which is not already included due to legal or copyright reasons. 
+-----------------------------------------------------------------------
+
+To open folder in vs code--> ctrl + o
+To open command palette--> ctrl + shift + p	(Command palette is the control center for all the commands in vs code, to find features and keyboard shortcuts)
+To create new file--> ctrl + n
+As you start coding, vscode automatically identifies the language and further it helps with auto-generated code.
+To save file-- ctrl+s
+If you want auto-save --> File >> Auto Save
+To execute our code-->f5	(It is working after opening extension working host!!! What the fuck is this?)
+
+
+On far-left is activity bar.
+	First icon is for the explorer. 
+	Magnifying glass	(For search, find and replace)
+	Source Control
+	Run and Debug
+	Extensions
+	
+On the bottom-most-->
+	On the left--> For errors and warnings
+	On the right--> Current Line Number and Programming Language.
+	
+	
+
+---------------------------------------------------		
+To Install nodeJs--
+sudo apt update
+sudo apt install nodejs
+sudo apt install npm
+node -v
+---------------------------------------------------
+
+When I run and dubug by pressing F5, It is run and debug in Extension Development Host, which I do not want. I want that Run and Debug should be happened in the same window.
+Steps
+	ctrl + shift + D	(To open Run and Debug view)
+	Choose the environment for your code		(Node.js)
+	Modify the launch.json configuration file to point to your javascript file.
+	Example 'launch.json' configuration for Node.js is:
+		{
+		  "version": "0.2.0",
+		  "configurations": [
+		    {
+		      "type": "node",
+		      "request": "launch",
+		      "name": "Run JavaScript",
+		      "program": "${file}"
+		    }
+		  ]
+		}
+		Ensure the "program" attribute points to your JavaScript file (${file} represents the current file you're working on).
+		
+		Haha!! No need to change attribute of program and it is good to have "program": "${workspaceFolder}/jsSample.js"	(Actually this attribute will be automatically created)
+		Just press ctrl + shift +d 
+		Click launch.json
+		Choose Environment (Node.js)
+		A file launch.json will be created in the same working directory 
+		
+-------------------------------------------------------------------------------
+FORMATTING AND TERMINAL
+-------------------------------------------------------------------------------
+
+Format Document Command--> ctrl + shift + I
+Display the integrated terminal --> ctrl + `
+Split the terminal --> ctrl + shift + 5
+Create the new terminal--> ctrl + shift + `
+
+
+--------------------------------------------------------------------------------
+Finding and opening the file using ctrl + p
+--------------------------------------------------------------------------------
+Quick Open recent files or search by filename 
+	ctrl + P
+		We can also search the file along with the line number
+			file-name:line-number
+		?	(View Quick Open Options)
+		press Right Arrow to open the selected file but leave the dropdown available
+		
+
+--------------------------------------------------------------------------------
+MULTI-CURSOR SELECTION
+--------------------------------------------------------------------------------
+ALT + Click	--> To Add a new Cursor
+Shift + Alt + Up-Arrow/ Shift+Alt+Down-Arrow	--> to add a new cursor above or below the current position
+Ctrl+Shift+L --> to add cursors to all matches of the current selection
+
+
+--------------------------------------------------------------------------------
+Settings Editor, Format on Type and Format of Paste
+--------------------------------------------------------------------------------
+File > Preferences > Settings	(ctrl + ,)
+Set Format On Type
+	check Editor: Format on Type
+Set Format on Paste
+	check Editor: Format on Paste
+	
+
+--------------------------------------------------------------------------------
+IntelliSense
+--------------------------------------------------------------------------------
+trigger IntelliSense with Ctrl+Space
+
+
+
+
+--------------------------------------------------------------------------------
+Personalize VSCode With Themes
+--------------------------------------------------------------------------------
+Color Theme
+	Ctrl + shift + P 
+	Preferences: Color Theme
+File Icon Theme:
+	ctrl + shift + P
+	Preferences: File Icon Theme
+Note: Revies Themes by up and down arrow
+
+
+
+--------------------------------------------------------------------------------
+Extensions in VSCode
+--------------------------------------------------------------------------------
+
+Searching For Extensions
+	@	---> It gives categorized extensions on the basis of popularity, installed, deprecated and so on. 
+	Example (@category) 	--> It will give various options
+		Example		(@category:programming languages:java) --> It will give further options. Hahahaha!!!!
+After addint extensions, Check the commands are added in our vscode or not --> By opening command palette	(ctrl + shift + P)
+
+
+How to realize which extension do we need to install:-
+-------------------------------------------------------
+Let's create a java file
+	hello.java
+	VsCode will immediately pop a message saying "Do you want to install the recommended extension for java?"
+	We can click install or Show recommendations
+	
+	
+--------------------------------------------------------------------------------
+Debugging in VSCode
+--------------------------------------------------------------------------------	
+We can custom our debugging experience-->
+When we press ctrl + shift + d, if launch.json is not present, we need to create launch.json file. When we click on 'create launch.json', It asks for the environment (For example node.js).
+Then, if we press f5 (run and debug), we enter into debug mode.  
+
+We will need to install extension for other languages
+	Run > Install Additional Debuggers
+Breakpoints	(Bottom Left Corner)
+	You have options, Add breakpoints, Remove Breakpoints, Toggle Activate Breakpoints
+	During Debugging, hover over variable to know the value being assigned.
+
+
+Note: Remember to choose Debug Console also.
+
+--------------------------------------------------------------------------------
+Version Control in VSCode
+--------------------------------------------------------------------------------
+Git should be installed in your system.
+Open a Source Folder in your vscode. 
+Click Source Control icon in Activity bar.
+	Click Initialize Repository. Now, we can see at the bottom left corner, the name of branch main, but we can change the name of the branch.
+		Open Command Palette. Type >rename...
+		Rename the branch to 'test-branch'
+	After Initialization, in our source control panel, files are shown with U beside it.  U stands for untracked file(unstaged). To track it, press + sign. Now, it is staged. 
+	Now, the sign beside files become A, that means new files are added in repository.
+	Now, commit with some message. 
+	
+Now, we want to create a separate branch.
+	command palette >> Type >'create branch' Let's name it-->  New-Features & Hit Enter
+	Now, we are in New-Features branch.
+	Now, suppose we add new lines in  file. We can see the green line in the gutter area.
+	Suppose we change something in the existing line, we see blue line in the gutter area.
+	Suppose we delete a line, it is reflected by red arrow.
+	We will see Symbol M beside the file, M denotes modified.
+	Visual Studio has also an ability to perform diff on files to compare files side by side. Typically, we need some tool for this. But, in vscode, it is built-in. For this,
+	Click on the file.
+	We can compare changes in one file.
+		Click on three dotted lines top-right corner, click inline-view.
+	Stage the changes and commit. 
+
+In the bottome-left corner, click on the current branch and change your branch if you want. 	
+	We need to merge New-Features branch in main branch.
+		Click Current Branch (New-Features branch)>Go to 'main' branch.
+		Now click on 3 dots >> Branch >> Merge Branch >> Name of the Branch that you want to merge
+		
+		
+
+Publish to Github
+-----------------------------------
+	Click on Publish Branch and Follow the process.	(It was amazing because I did not create Repository in my github account. VSCode made that automatically)
+	
+	
+Clone Repository
+-------------------------------
+	Copy the url of Repository from Github
+	Open Command Palette >> type '>clone' and hit Enter >> paste the url and hit enter
+	It will ask for the location to store the cloned project.
+	After that, it will ask to open the repository. You can hit yes. Ohhh yes.
+	
+	
+That's it for now for Source Control.
+
+
+--------------------------------------------------------------------------------
+ Customize Visual Studio Code with settings and keyboard shortcuts.
+--------------------------------------------------------------------------------		
+	 Find a keyboard shortcut in command palette. Just search and you will get something.
+	 Learn more about this when you need it in future.
+	 
+------------------------------------------------------------------------------------THE END----------------------------------------------------------------------------------
+	 
+
+	
+	
+
+
+
