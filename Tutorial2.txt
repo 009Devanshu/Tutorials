@@ -1,0 +1,62 @@
+To Open Welcome Page
+	help >> Welcome
+		'connect to' feature which provides various featuress like 
+			connect to ssh, 
+			tunnel, 
+			dev container,
+			git hub codespace 
+			Remote Repository etc
+		In welcome window, It also lists recently visited Folders (Projects) so we can easily switch to other projects.
+Interactive Editor Playground
+	help >> Editor Playgournd	(Various Guided Tours)
+		Line Actions
+			-Copy the entire line with ctrl + c.
+			-Move entire line or selection of lines up or down with Alt + Up arrow and alt + Down Arrow
+			-Delete an entire line with -- ctrl + shift + K   or   ctrl + /
+			-Comment with -- ctrl + shift + A
+			
+			
+			
+.vscode Folder 
+	Workspace specific files are in a .vscode folder at the root. For example, tasks.json for the Task Runner and launch.json 
+	for the debugger.
+
+Status Bar 
+	Errors and Warnings 
+		ctrl + shift + M --> It will open the problems window.
+		Cycle through errors using F8 or Shift + F8
+
+Toggle Side Bar 
+	ctrl + B
+Toggle Pannel 
+	ctrl + J
+Zen Mode 
+	ctrl + k Z 
+	To exit zen mode ---> esc twice
+
+Side By Side Editing 
+	ctrl + \ --> To create new editor 
+	ctr1 + 1 ctrl+ 2 .. --> To switch between different editors
+
+Close the current opened folder 
+	ctrl + K F
+
+Navigation History
+	ctrl + tab 
+Navigate Back 
+	Ctrl+Alt+-
+Navigate Forward 
+	Ctrl + Shift + -
+
+
+
+
+	
+	
+IntelliSense can also be integrated for other languages.
+
+
+
+
+
+
