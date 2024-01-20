@@ -12,8 +12,8 @@ Interactive Editor Playground
 		Line Actions
 			-Copy the entire line with ctrl + c.
 			-Move entire line or selection of lines up or down with Alt + Up arrow and alt + Down Arrow
-			-Delete an entire line with -- ctrl + shift + K   or   ctrl + /
-			-Comment with -- ctrl + shift + A
+			-Delete an entire line with -- ctrl + shift + K  
+			-Comment with -- ctrl + shift + A   or   ctrl + /
 			
 			
 			
